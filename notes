@@ -1,0 +1,95 @@
+# Backend has two major component :-
+
+1)A Javascript programmign language (Java , Js, php, golang, C++)
+    language ke sath aik frame work use karna padega 
+
+
+
+
+2)A Database(Mongo , My SQL , Postgres, sqlite)
+    orm or odm will be used 
+
+
+
+
+        Here we have frontend which sends the data to backed  <-------->  API   <-----> here we have backend code written once but can be <----> DB
+                                                                                    deoployd in multiple computers, and 
+                                                                                    backend is connected to db                               
+
+
+
+
+#We write backend in the server now suppose you visit url which is detected by framework now which function to call 
+#is done by framewrk and data is send using the API, so yaha tak ka kam is for backend, express and mongoos which is done using routing.
+
+
+# javascript based backend 
+  ->data 
+  ->file 
+  ->third party api 
+  ->these three scenarios are there 
+
+
+# runtine 
+now there could be various runtime in javascript now adays  nodejs, reno, bun etc 
+
+
+
+# structure of directory 
+package.json
+.env (databse url and password are stored here)
+(readme, git , lint, prettier etc)
+
+
+
+
+index(used to connect Database)        App.js(config cookie url code)        constants(enums DB-name, keeps enums of repetitive things)   //these all are the files
+
+
+
+# Directory structure 
+->DB (Database diectory actual code of database is present here)
+->Models (Then we have models structure of how data is stored is shown here, like for mongoos it is diff , tells us what to store what to ask for )
+->controllers  (functionaly is stored here like function , which takes data and process it )
+->routes (on which url which function to call)
+->middleware ()
+->utils (These keeps the mailing function which are used repetedly)
+->More (depends)
+
+
+# HOW TO DEPLOY BACKEND
+  first and only major requrement is nodeJS ,  than type node -v which gives us the version of the node 
+  next we need npm which is node package manager which helps us install the packagfes
+
+
+
+# what does express do
+  computer ---------------------(req like get post) server (someone has to listen constantly /: home route /login route)
+          ----------------------(res) server (home route)
+
+
+# next we have get request 
+  ->create empty node application  (npm init) this is a utility which helps us to create package.json
+  write everthing than it makes us a package.json
+
+# how to run code using package.json 
+ -> we make a script command for this which says how to run the file using package.json so we use scripts command for it 
+ ->now if we type npm run start it will execute node index.js  helps us un server side 
+
+# Backend
+  ->next we need to learn express which is a web frame work (npm install express)
+  ->go to the website getting started-> helloworld
+  ->once we make any update in the server route we need to restart the app
+
+# enviorment variable
+  ->if we need to bring this app to production stage than we need to study about enviorment variable 
+  ->becuase there could be some difference in production enviorment and local enviorment 
+  -> so we need to study .env we
+  ->new file is needed .env 
+  ->to use this write require('dotenv').config()
+
+# we could deploy the code in any free website 
+ -> render , aws , cyclic.sh , digital ocean 
+ -> all have the same process 
+ -> push everything in git 
+ ->initizlize git make .gitignore
